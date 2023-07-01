@@ -20,20 +20,25 @@ public class Ventana extends JFrame{
 
         JLabel texto = new JLabel();
         texto.setText("Pesos Colombianos");
-        texto.setBounds(50, 5, 200, 20);
+        texto.setBounds(90, 35, 200, 20);
         panel.add(texto);
 
         JTextField cantidad = new JTextField();
-        cantidad.setBounds(50, 50, 200, 20);
+        cantidad.setBounds(50, 70, 200, 20);
         panel.add(cantidad);
 
+        JLabel texto2 = new JLabel();
+        texto2.setText("Convertir a: ");
+        texto2.setBounds(120, 105, 200, 20);
+        panel.add(texto2);
+
         String monedas[] = {"Dolar", "Euro", "Libra", "Yen", "Won"};
-        JList moneda = new JList<>(monedas);
-        moneda.setBounds(50, 100, 200, 20);
+        JComboBox moneda = new JComboBox(monedas);
+        moneda.setBounds(50, 140, 200, 20);
         panel.add(moneda);
 
         JButton convertir = new JButton("Convertir");
-        convertir.setBounds(50, 150, 100, 20);
+        convertir.setBounds(90, 200, 130, 20);
         panel.add(convertir);
     }
 }
