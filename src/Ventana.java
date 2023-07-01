@@ -12,5 +12,20 @@ public class Ventana extends JFrame{
 
     private void iniciarComponentes(){
         JPanel panel = new JPanel();
+
+        this.getContentPane().add(panel);
+
+        JLabel texto = new JLabel("Pesos Colombianos");
+        panel.add(texto);
+
+        JTextField cantidad = new JTextField();
+        panel.add(cantidad);
+
+        String monedas[] = {"Dolar", "Euro", "Libra", "Yen", "Won"};
+        JList moneda = new JList<>(monedas);
+        panel.add(moneda);
+
+        JButton convertir = new JButton("Convertir");
+        panel.add(convertir);
     }
 }
