@@ -10,6 +10,10 @@ public class moneda {
         valores = new HashMap<>();
 
         valores.put("Dolar", 0.00024);
+        valores.put("Euro", 0.00022);
+        valores.put("Libra", 0.00019);
+        valores.put("Yen", 0.035);
+        valores.put("won", 0.32);
     }
 
     public moneda(String nombre, Map valores) {
