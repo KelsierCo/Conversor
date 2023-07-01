@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Ventana extends JFrame{
     public Ventana(){
@@ -40,5 +42,14 @@ public class Ventana extends JFrame{
         JButton convertir = new JButton("Convertir");
         convertir.setBounds(90, 200, 130, 20);
         panel.add(convertir);
+
+        ActionListener convertirListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(cantidad.getText());
+            }
+        };
+
+        convertir.addActionListener(convertirListener);
     }
 }
