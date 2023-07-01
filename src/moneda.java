@@ -27,6 +27,6 @@ public class moneda {
 
     public String conversion(int cantidad, String moneda){
         Double a = cantidad * this.valores.get(moneda);
-        return "hola " + this.valores.get(moneda);
+        return cantidad + " en " + moneda + " es " + a;
     }
 }

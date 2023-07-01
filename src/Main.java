@@ -6,5 +6,7 @@ public class Main {
         moneda Cop = new moneda();
 
         System.out.println(Cop.getValores());
+
+        System.out.println(Cop.conversion(2000, "Dolar"));
     }
 }
