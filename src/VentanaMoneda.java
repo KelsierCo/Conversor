@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Ventana extends JFrame{
-    public Ventana(){
+public class VentanaMoneda extends JFrame{
+    public VentanaMoneda(){
         setSize(300, 300);
         setTitle("Conversor de moneda Alura");
 
