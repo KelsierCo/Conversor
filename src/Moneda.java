@@ -30,7 +30,7 @@ public class Moneda {
     }
 
     public String conversion(int cantidad, String moneda){
-        Double a = cantidad * this.valores.get(moneda);
-        return cantidad + " " + this.nombre + " en " + moneda + " es " + a;
+        Double valor = cantidad * this.valores.get(moneda);
+        return cantidad + " " + this.nombre + " son " + valor + " " + moneda + "es";
     }
 }

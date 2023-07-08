@@ -65,11 +65,11 @@ public class VentanaMoneda extends JFrame{
         panel.add(convertir);
     }
 
-    public JTextField getCantidad() {
-        return cantidad;
+    public int getCantidad() {
+        return Integer.parseInt(cantidad.getText());
     }
 
-    public JComboBox getMoneda() {
-        return moneda;
+    public String getMoneda() {
+        return moneda.getSelectedItem().toString();
     }
 }

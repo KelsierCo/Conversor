@@ -13,7 +13,7 @@ public class Main {
         ActionListener convertirListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String respuesta = ventanaMoneda.getCantidad().getText() + " COP son " + 2000 + " " + ventanaMoneda.getMoneda().getSelectedItem()+"es" ;
+                String respuesta = Cop.conversion(ventanaMoneda.getCantidad(), ventanaMoneda.getMoneda());
                 VentanaRepuesta ventanaRespuesta = new VentanaRepuesta(respuesta);
 
                 ventanaRespuesta.setVisible(true);
