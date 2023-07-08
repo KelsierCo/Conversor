@@ -3,10 +3,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        moneda Cop = new moneda();
+        Moneda Cop = new Moneda();
         VentanaMoneda ventanaMoneda = new VentanaMoneda();
 
         ventanaMoneda.setVisible(true);
-        System.out.println(Cop.conversion(4168, "Dolar"));
     }
 }

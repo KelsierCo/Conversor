@@ -1,11 +1,11 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class moneda {
+public class Moneda {
     private String nombre;
     private Map<String, Double> valores;
 
-    public moneda() {
+    public Moneda() {
         nombre = "Peso Colombiano";
         valores = new HashMap<>();
 
@@ -16,7 +16,7 @@ public class moneda {
         valores.put("won", 0.32);
     }
 
-    public moneda(String nombre, Map valores) {
+    public Moneda(String nombre, Map valores) {
         this.nombre = nombre;
         this.valores = valores;
     }

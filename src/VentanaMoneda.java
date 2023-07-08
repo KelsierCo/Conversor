@@ -34,7 +34,9 @@ public class VentanaMoneda extends JFrame{
         ActionListener convertirListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(moneda.getSelectedItem());
+                VentanaRepuesta respuesta = new VentanaRepuesta("hola");
+
+                respuesta.setVisible(true);
             }
         };
 
