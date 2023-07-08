@@ -31,16 +31,7 @@ public class VentanaMoneda extends JFrame{
         iniciarComboBox();
         iniciarBoton();
 
-        ActionListener convertirListener = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                VentanaRepuesta respuesta = new VentanaRepuesta("hola");
 
-                respuesta.setVisible(true);
-            }
-        };
-
-        convertir.addActionListener(convertirListener);
     }
 
     private void iniciarLabel(){
@@ -72,5 +63,13 @@ public class VentanaMoneda extends JFrame{
         convertir = new JButton("Convertir");
         convertir.setBounds(90, 200, 130, 20);
         panel.add(convertir);
+    }
+
+    public JTextField getCantidad() {
+        return cantidad;
+    }
+
+    public JComboBox getMoneda() {
+        return moneda;
     }
 }

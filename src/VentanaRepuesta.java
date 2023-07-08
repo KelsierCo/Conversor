@@ -25,7 +25,7 @@ public class VentanaRepuesta extends JFrame {
 
         respuesta = new JLabel();
         respuesta.setText(texto);
-        respuesta.setBounds(160, 20, 150, 20);
+        respuesta.setBounds(120, 20, 200, 20);
         panel.add(respuesta);
 
 
