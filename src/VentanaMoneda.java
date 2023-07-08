@@ -3,6 +3,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class VentanaMoneda extends JFrame{
+
+    JPanel panel;
     public VentanaMoneda(){
         setSize(300, 300);
         setTitle("Conversor de moneda Alura");
@@ -15,24 +17,16 @@ public class VentanaMoneda extends JFrame{
     }
 
     private void iniciarComponentes(){
-        JPanel panel = new JPanel();
+        panel = new JPanel();
 
         panel.setLayout(null);
         this.getContentPane().add(panel);
 
-        JLabel texto = new JLabel();
-        texto.setText("Pesos Colombianos");
-        texto.setBounds(90, 35, 200, 20);
-        panel.add(texto);
+        iniciarLabel();
 
         JTextField cantidad = new JTextField();
         cantidad.setBounds(50, 70, 200, 20);
         panel.add(cantidad);
-
-        JLabel texto2 = new JLabel();
-        texto2.setText("Convertir a: ");
-        texto2.setBounds(120, 105, 200, 20);
-        panel.add(texto2);
 
         String monedas[] = {"Dolar", "Euro", "Libra", "Yen", "Won"};
         JComboBox moneda = new JComboBox(monedas);
@@ -46,10 +40,22 @@ public class VentanaMoneda extends JFrame{
         ActionListener convertirListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(cantidad.getText());
+                System.out.println(moneda.getSelectedItem());
             }
         };
 
         convertir.addActionListener(convertirListener);
+    }
+
+    private void iniciarLabel(){
+        JLabel texto = new JLabel();
+        texto.setText("Pesos Colombianos");
+        texto.setBounds(90, 35, 200, 20);
+        panel.add(texto);
+
+        JLabel texto2 = new JLabel();
+        texto2.setText("Convertir a: ");
+        texto2.setBounds(120, 105, 200, 20);
+        panel.add(texto2);
     }
 }
