@@ -1,10 +1,14 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class VentanaMoneda extends JFrame{
 
     JPanel panel;
+    JButton convertir;
+    JTextField cantidad;
+    JComboBox moneda;
     public VentanaMoneda(){
         setSize(300, 300);
         setTitle("Conversor de moneda Alura");
@@ -23,19 +27,9 @@ public class VentanaMoneda extends JFrame{
         this.getContentPane().add(panel);
 
         iniciarLabel();
-
-        JTextField cantidad = new JTextField();
-        cantidad.setBounds(50, 70, 200, 20);
-        panel.add(cantidad);
-
-        String monedas[] = {"Dolar", "Euro", "Libra", "Yen", "Won"};
-        JComboBox moneda = new JComboBox(monedas);
-        moneda.setBounds(50, 140, 200, 20);
-        panel.add(moneda);
-
-        JButton convertir = new JButton("Convertir");
-        convertir.setBounds(90, 200, 130, 20);
-        panel.add(convertir);
+        iniciarField();
+        iniciarComboBox();
+        iniciarBoton();
 
         ActionListener convertirListener = new ActionListener() {
             @Override
@@ -57,5 +51,24 @@ public class VentanaMoneda extends JFrame{
         texto2.setText("Convertir a: ");
         texto2.setBounds(120, 105, 200, 20);
         panel.add(texto2);
+    }
+
+    private void iniciarField(){
+        cantidad = new JTextField();
+        cantidad.setBounds(50, 70, 200, 20);
+        panel.add(cantidad);
+    }
+
+    private void iniciarComboBox(){
+        String monedas[] = {"Dolar", "Euro", "Libra", "Yen", "Won"};
+        moneda = new JComboBox(monedas);
+        moneda.setBounds(50, 140, 200, 20);
+        panel.add(moneda);
+    }
+
+    private void iniciarBoton(){
+        convertir = new JButton("Convertir");
+        convertir.setBounds(90, 200, 130, 20);
+        panel.add(convertir);
     }
 }
