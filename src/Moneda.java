@@ -14,7 +14,7 @@ public class Moneda {
         valores.put("Euro", 0.00022);
         valores.put("Libra", 0.00019);
         valores.put("Yen", 0.035);
-        valores.put("won", 0.32);
+        valores.put("Won", 0.32);
     }
 
     public Moneda(String nombre, Map valores) {
