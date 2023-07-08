@@ -9,7 +9,7 @@ public class VentanaRepuesta extends JFrame {
     JButton salir;
 
     public VentanaRepuesta(String texto){
-        setSize(200, 200);
+        setSize(400, 150);
         setTitle("Conversor de moneda Alura");
 
         iniciarComponentes(texto);
@@ -25,13 +25,13 @@ public class VentanaRepuesta extends JFrame {
 
         respuesta = new JLabel();
         respuesta.setText(texto);
-        respuesta.setBounds(20, 20, 150, 20);
+        respuesta.setBounds(160, 20, 150, 20);
         panel.add(respuesta);
 
 
         salir = new JButton();
         salir.setText("Salir");
-        salir.setBounds(40, 40, 50, 20);
+        salir.setBounds(150, 75, 80, 20);
         panel.add(salir);
 
         ActionListener salirListener = new ActionListener() {
