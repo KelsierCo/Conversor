@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,6 +32,11 @@ public class Moneda {
 
     public String conversion(int cantidad, String moneda){
         Double valor = cantidad * this.valores.get(moneda);
-        return cantidad + " " + this.nombre + " son " + valor + " " + moneda + "es";
+        return cantidad + " " + this.nombre + " son " + valorFormateado(valor) + " " + moneda + "es";
+    }
+
+    public String valorFormateado(Double valor){
+        DecimalFormat df = new DecimalFormat("#.##");
+        return df.format(valor);
     }
 }
