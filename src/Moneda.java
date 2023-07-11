@@ -32,6 +32,7 @@ public class Moneda {
 
     public String conversion(int cantidad, String moneda){
         Double valor = cantidad * this.valores.get(moneda);
+        if(valor == 0) { return "Por favor, ingrese un numero valido";}
         return cantidad + " " + this.nombre + " son " + valorFormateado(valor) + " " + moneda + "es";
     }
 
