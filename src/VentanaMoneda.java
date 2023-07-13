@@ -68,7 +68,8 @@ public class VentanaMoneda extends JFrame{
     public int getCantidad() {
         try {
             int cantidad = Integer.parseInt(this.cantidad.getText());
-            return cantidad;
+            if (cantidad > 0) return cantidad;
+            return 0;
         } catch (NumberFormatException e){
             return 0;
         }
